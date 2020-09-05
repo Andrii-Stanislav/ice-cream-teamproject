@@ -1,9 +1,177 @@
-.locations {
-  color: tomato;
+.container {
+  padding: 0 40px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link {
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+}
+
+.list {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.container {
+  background: $secondary-bg-color;
+}
+
+.location-list-block {
+  width: 220px;
+  height: 427px;
+  background: #ffffff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  padding-left: 20px;
+  padding-top: 43px;
+}
+
+.location-list-title {
+  width: 80px;
+  height: 16px;
+  font-family: $font-primery;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+  background: #f0d1a5;
+  border-radius: 4px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.location-list-city {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+
+  color: #000000;
+}
+
+.location-list-info {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: $secondary-text-color;
+
+  width: 179px;
+}
+
+.location-work-week {
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.location-weekend {
+  padding-bottom: 25px;
+}
+
+.location-list-city,
+.location-list-time {
+  margin: 0;
+}
+
+.location-list-time {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+
+  color: $subtitle-color;
+}
+
+.location-block-list:not(:last-child) {
+  width: 179px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.location-address-block {
+  display: block;
+  padding-top: 25px;
+}
+
+.location-address {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: $secondary-text-color;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .location-list {
+    margin-left: 30px;
+  }
+
+  .location-list-block:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 34px;
+  }
+
+  .location-list-block {
+    height: 544px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    padding: 0 115px;
+  }
+}
+
+/*.link {
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+}
+
+.list {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.container {
+  padding: 0 40px;
 }
 
 .location-container {
-  background: #fff5f6;
+  width: 1280px;
+  background: $secondary-bg-color;
+  padding-left: 115px;
+  padding-right: 115px;
+  background-image: url(../images/location/drops_of_milk.png);
+  background-repeat: no-repeat;
 }
 
 .location-list {
@@ -17,8 +185,54 @@
   background: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+  padding-left: 30px;
 }
 
 .location-list-block:not(:last-child) {
   margin-right: 30px;
 }
+
+.location-list-title {
+  display: block;
+  box-sizing: content-box;
+  background: #f0d1a5;
+  border-radius: 6px;
+  height: 28px;
+
+  font-family: $font-primery;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+}
+
+.menu-button {
+  display: flex;
+  justify-content: center;
+}
+
+.location-button-locations {
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  border: none;
+
+  width: 198px;
+  height: 44px;
+  border-radius: 22px;
+
+  margin-right: 15px;
+}
+
+.location-button-svg {
+  width: 4.5px;
+  height: 8px;
+}*/
