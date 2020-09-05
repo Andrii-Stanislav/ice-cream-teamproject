@@ -1,6 +1,9 @@
+.location-section {
+  background: $secondary-bg-color;
+}
+
 .container {
   padding: 0 40px;
-
   margin-left: auto;
   margin-right: auto;
 }
@@ -17,14 +20,19 @@
   list-style: none;
 }
 
-.container {
-  background: $secondary-bg-color;
+.location-container {
+  font-family: $font-primery;
+  position: relative;
+}
+
+.block-container {
+  position: absolute;
 }
 
 .location-list-block {
   width: 220px;
   height: 427px;
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   padding-left: 20px;
@@ -33,17 +41,14 @@
 
 .location-list-title {
   width: 80px;
-  height: 16px;
-  font-family: $font-primery;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.83;
-  display: block;
+  line-height: 1.4;
   text-align: center;
   letter-spacing: 0.04em;
 
-  color: #ffffff;
+  color: $light-text-color;
   background: #f0d1a5;
   border-radius: 4px;
   margin: 0;
@@ -51,24 +56,32 @@
 }
 
 .location-list-city {
-  font-family: DM Sans;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.83;
-
-  color: #000000;
+  letter-spacing: 0.04em;
+  color: $dark-text-color;
 }
 
 .location-list-info {
-  font-family: DM Sans;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
   color: $secondary-text-color;
-
   width: 179px;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+.location-list-week {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: #000000;
 }
 
 .location-work-week {
@@ -81,23 +94,17 @@
 }
 
 .location-list-city,
-.location-list-time {
+.location-list-time,
+.location-list-week {
   margin: 0;
 }
 
 .location-list-time {
-  font-family: DM Sans;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.83;
-
   color: $subtitle-color;
-}
-
-.location-block-list:not(:last-child) {
-  width: 179px;
-  border-bottom: 1px solid #e1e1e1;
 }
 
 .location-address-block {
@@ -106,7 +113,6 @@
 }
 
 .location-address {
-  font-family: DM Sans;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -115,15 +121,64 @@
   color: $secondary-text-color;
 }
 
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  margin-top: 54px;
+}
+
+.location-button-locations,
+.location-button-franchise {
+  font-family: $font-primery;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: $title-color;
+  border: none;
+  width: 198px;
+  height: 44px;
+  border-radius: 22px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    color: $light-text-color;
+    background-color: $title-color;
+  }
+}
+
+.location-button-svg {
+  width: 4.5px;
+  height: 8px;
+  color: #ffffff;
+}
+
+.location-button-locations {
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 320px) {
   .container {
     width: 320px;
-    padding: 0 20px;
-    margin: 0 auto;
+    padding: 0 50px;
   }
 
-  .location-list {
-    margin-left: 30px;
+  .block-container {
+    top: -84px;
+  }
+
+  .location-container {
+    height: 1389px;
+  }
+
+  .location-block-list:not(:last-child) {
+    width: 179px;
+    border-bottom: 1px solid #e1e1e1;
   }
 
   .location-list-block:not(:last-child) {
@@ -131,14 +186,80 @@
   }
 }
 
+@media screen and (max-width: 319px) {
+  .location-list-block:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
-    padding: 0 34px;
+    width: 772px;
+    padding: 0 36px;
+  }
+
+  .block-container {
+    top: -78px;
+  }
+
+  .location-container {
+    height: 597px;
+  }
+
+  .location-list-title {
+    width: 73px;
+    height: 27px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.04em;
+    margin-bottom: 30px;
+  }
+
+  .location-list-city,
+  .location-list-week,
+  .location-list-time,
+  .location-address {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+
+  .location-list-info {
+    font-size: 14px;
+    line-height: 1.64;
+    width: 145px;
+    margin: 0;
+    padding-top: 14px;
+    padding-bottom: 30px;
   }
 
   .location-list-block {
     height: 544px;
+    width: 220px;
+    padding: 50px 31px;
+    margin-bottom: 0;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  .location-block-list:not(:last-child) {
+    width: 157px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  .location-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .location-list {
+    display: flex;
+  }
+  .menu-button {
+    display: block;
+    justify-content: center;
   }
 }
 
@@ -146,6 +267,69 @@
   .container {
     width: 1280px;
     padding: 0 115px;
+    background-image: url(../images/location/drops_of_milk.png);
+    background-repeat: no-repeat;
+  }
+
+  .block-container {
+    top: -102px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .location-container {
+    height: 600px;
+  }
+
+  .location-list-city,
+  .location-list-week,
+  .location-list-time,
+  .location-address {
+    font-size: 16px;
+    line-height: 1.88;
+  }
+
+  .location-list-info {
+    font-size: 16px;
+    line-height: 1.81;
+    width: 234px;
+    margin: 0;
+    padding-top: 14px;
+    padding-bottom: 30px;
+  }
+
+  .location-address-block {
+    display: block;
+    padding-top: 32px;
+  }
+
+  .location-list-block {
+    height: 572px;
+    width: 330px;
+    padding: 52px 43px 61px 43px;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-right: 29px;
+    }
+  }
+
+  .location-block-list:not(:last-child) {
+    width: 234px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  .location-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .location-list {
+    display: flex;
+  }
+  .menu-button {
+    display: block;
+    justify-content: center;
   }
 }
 
