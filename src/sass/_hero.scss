@@ -21,11 +21,28 @@ p {
 }
 
 .hero-section {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 502px;
     background-color: $hero-bg-color;
+    height: 502px;
+    
+    @media screen and (min-width: 768px) {
+        height: 400px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        height: 665px;
+    }
+}
+
+.hero-container {
+    position: relative;
+    height: 100%;
+
+    @media screen and (min-width: 400px) {
+    width: 400px;
+    }
+
+    @media screen and (max-width: 767px) {
+    margin: 0 auto;
     background-size: 171px 410px, 346px 344px;
     background-image: 
         url(.././images/hero_images/slider-pic7-1.png),
@@ -33,95 +50,93 @@ p {
     background-repeat: no-repeat, no-repeat;
     background-position: top 92px left 117px, top 83px left 36px;
 
-    @media screen and (min-width: 320px) {
-        @media screen and (min-device-pixel-ratio: 2),
-            screen and (-webkit-min-device-pixel-ratio: 2),
-            screen and (-o-min-device-pixel-ratio: 2),
-            screen and (min-resolution: 192dpi),
-            screen and (min-resolution: 2dppx) {
-
-            background-image: 
-            url(.././images/hero_images/slider-pic7-1@2x.png),
-            url(.././images/hero_images/ellipse-3@2x.png);
-
-        }
-    }
-
-
-
-    @media screen and (min-width: 768px) {
-
-            height: 399px;
-            background-size: 168px 133px, 143px, 324px 322px, 124px 126px;
-            background-image: 
-            url(.././images/hero_images/tablet/slider-pic4-1-t.png),
-            url(.././images/hero_images/tablet/slider-pic7-1-t.png),
-            url(.././images/hero_images/tablet/ellipse-3-t.png),
-            url(.././images/hero_images/tablet/slider-pic5-1-t.png);
-            background-repeat: 
-            no-repeat, 
-            no-repeat, 
-            no-repeat,
-            no-repeat;
-            background-position: 
-            top 266px right 34px,
-            top 63px left 378px, 
-            top 31px left 307px, 
-            top 245px left 34px;
-
-    }
-
-    @media screen and (min-width: 768px) {
         @media screen and (min-device-pixel-ratio: 2),
         screen and (-webkit-min-device-pixel-ratio: 2),
-        screen and (-o-min-device-pixel-ratio: 2/1),
+        screen and (-o-min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-            background-image: 
-            url(.././images/hero_images/slider-pic4-1@2x.png),
-            url(.././images/hero_images/slider-pic7-1@2x.png),
-            url(.././images/hero_images/ellipse-3@2x.png),
-            url(.././images/hero_images/slider-pic5-1@2x.png);
-        }         
-    }
 
-    
-
-    @media screen and (min-width: 1280px) {
-        height: 665px;
-    
-        background-size: 293px 232px, 236px 557px, 538px 538px, 188px 191px;
         background-image: 
-        url(.././images/hero_images/slider-pic4-1.png),
-        url(.././images/hero_images/slider-pic7-1.png),
-        url(.././images/hero_images/ellipse-3.png),
-        url(.././images/hero_images/slider-pic5-1.png);
+        url(.././images/hero_images/slider-pic7-1@2x.png),
+        url(.././images/hero_images/ellipse-3@2x.png);
+
+        }  
+    }  
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+        // height: 399px;
+        margin: 0 auto;
+        background-size: 168px 133px, 143px, 324px 322px, 124px 126px;
+        background-image: 
+        url(.././images/hero_images/tablet/slider-pic4-1-t.png),
+        url(.././images/hero_images/tablet/slider-pic7-1-t.png),
+        url(.././images/hero_images/tablet/ellipse-3-t.png),
+        url(.././images/hero_images/tablet/slider-pic5-1-t.png);
         background-repeat: 
         no-repeat, 
         no-repeat, 
         no-repeat,
         no-repeat;
         background-position: 
-        bottom right 108px,
-        bottom left 595px, 
-        top 52px left 476px, 
-        bottom  45px left 78px;
+        top 266px right 34px,
+        top 63px left 378px, 
+        top 31px left 307px, 
+        top 245px left 34px;
 
-    } 
+}
 
-    @media screen and (min-width: 1280px) {
-        @media screen and (min-device-pixel-ratio: 2),
-        screen and (-webkit-min-device-pixel-ratio: 2),
-        screen and (-o-min-device-pixel-ratio: 2/1),
-        screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
-            background-image: 
-            url(.././images/hero_images/slider-pic4-1@2x.png),
-            url(.././images/hero_images/slider-pic7-1@2x.png),
-            url(.././images/hero_images/ellipse-3@2x.png),
-            url(.././images/hero_images/slider-pic5-1@2x.png);
-        }
+@media screen and (min-width: 768px) {
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        background-image: 
+        url(.././images/hero_images/slider-pic4-1@2x.png),
+        url(.././images/hero_images/slider-pic7-1@2x.png),
+        url(.././images/hero_images/ellipse-3@2x.png),
+        url(.././images/hero_images/slider-pic5-1@2x.png);
+    }         
+}
+
+@media screen and (min-width: 1280px) {
+    width: 1280px;
+    // height: 665px;
+    margin: 0 auto;
+    background-size: 293px 232px, 236px 557px, 538px 538px, 188px 191px;
+    background-image: 
+    url(.././images/hero_images/slider-pic4-1.png),
+    url(.././images/hero_images/slider-pic7-1.png),
+    url(.././images/hero_images/ellipse-3.png),
+    url(.././images/hero_images/slider-pic5-1.png);
+    background-repeat: 
+    no-repeat, 
+    no-repeat, 
+    no-repeat,
+    no-repeat;
+    background-position: 
+    bottom right 108px,
+    bottom left 595px, 
+    top 52px left 476px, 
+    bottom  45px left 78px;
+
+} 
+
+@media screen and (min-width: 1280px) {
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        background-image: 
+        url(.././images/hero_images/slider-pic4-1@2x.png),
+        url(.././images/hero_images/slider-pic7-1@2x.png),
+        url(.././images/hero_images/ellipse-3@2x.png),
+        url(.././images/hero_images/slider-pic5-1@2x.png);
     }
+}
+
 }
 
 .see-more {
