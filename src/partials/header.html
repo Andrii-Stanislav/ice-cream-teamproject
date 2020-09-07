@@ -4,35 +4,11 @@
       <img
         class="logo-img"
         src="./images/logo/logo.png"
-        srcset="./images/logo/logo@2x.png 2x"
         alt="logo"
+        width="199px"
       />
+      <!-- srcset="./images/logo/logo-2x.png 2x" -->
     </a>
-    <button
-      type="button"
-      class="menu-btn"
-      aria-expanded="false"
-      aria-controls="menu-wrapper"
-      data-menu-button
-    >
-      <!-- <svg width="20" height="12">
-        <use class="icon-burger" href="./images/sprite.svg#burger"></use>
-        <use class="icon-close" href="./images/sprite.svg#close"></use>
-      </svg> -->
-    </button>
-    <button type="button" class="tablet-btn">
-      Buy now
-      <!-- <svg class="icon-vector" width="10" height="10">
-        <use href="./images/sprite.svg#basic-btn"></use>
-      </svg> -->
-    </button>
-    <div class="menu-wrapper" data-menu>
-      <button type="button" class="header-btn">
-        Buy now
-        <!-- <svg class="icon-vector" width="10" height="10">
-          <use href="./images/sprite.svg#basic-btn"></use>
-        </svg> -->
-      </button>
       <nav class="navigation">
         <ul class="list navigation-list">
           <li class="navigation-list-item">
@@ -52,6 +28,22 @@
           </li>
         </ul>
       </nav>
-    </div>
+    <button class="header-btn" type="button">
+      Buy now
+      <svg class="icon-vector" width="10" height="10">
+        <use href="./images/sprite.svg#basic-btn"></use>
+      </svg>
+    </button>
+    <button class="menu-btn"
+      type="button"
+      aria-expanded="false"
+      aria-controls="menu-wrapper"
+      data-menu-button
+    >
+      <svg width="20" height="12">
+        <use class="icon-burger" href="./images/sprite.svg#burger"></use>
+        <use class="icon-close" href="./images/sprite.svg#close"></use>
+      </svg>
+    </button>
   </div>
 </header>

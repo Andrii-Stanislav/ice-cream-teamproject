@@ -1,14 +1,22 @@
 .link {
   @extend %link;
 }
+
 .list {
   @extend %list;
 }
+
 .header {
-  position: relative;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 100%;
   font-family: $font-primery;
-  background-color: $hero-bg-color;
   padding-top: 6px;
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 30px;
+  }
 }
 
 .header .container {
@@ -16,42 +24,94 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 6px 20px;
+
 }
+
 .logo {
   display: block;
   width: 199px;
   height: 50px;
 }
-.header-btn,
-.tablet-btn {
+
+.btn-box {
+  display: flex;
+}
+
+.navigation {
+ 
+  color: $light-text-color;
+
+  @media screen and (max-width: 1279px) {
+    position: absolute;
+    z-index: 2;
+    top: -6px;
+    right: 0;
+    width: 250px;
+    height: 500px;
+    padding-top: 136px;
+    background-color: #E17992;
+    // transform: translateY(-500px);
+  }
+
+  @media screen and (min-width: 1280px) {
+      margin-right: auto;
+      margin-left: 110px;
+  }
+}
+
+.navigation-list {
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
+}
+
+.header-btn {
+  position: absolute;
+  top: 54px;
+  right: 20px;
+  z-index: 3;
   display: block;
+  height: 44px;
+  width: 186px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
   color: $title-color;
   background-color: $light-text-color;
   border-radius: 22px;
-  width: 209px;
+  border: $light-text-color;
+
   display: flex;
   align-items: center;
   text-align: center;
-  padding-top: 12px;
-  padding-right: 43px;
-  padding-bottom: 12px;
-  padding-left: 62px;
+  padding: 0 45px;
+
+  @media screen and (min-width: 1280px) {
+    top: 15px;
+    right: 115px;
+  }
+
+  // transform: translateY(-500px);
+
   &:hover,
   &:focus {
     background-color: #c7133e;
   }
-  .icon-vector {
-    margin-left: 26px;
+
+  & .icon-vector {
+    margin-left: 20px;
   }
 }
+
 .tablet-btn {
-  display: none;
-  width: 160px;
   padding-right: 35px;
   padding-left: 35px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   .icon-vector {
     margin-left: 8px;
   }
@@ -74,116 +134,123 @@
       display: none;
     }
   }
+
+  @media screen and (min-width: 768px) {
+      margin-right: 245px; 
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
 }
-.menu-wrapper {
-  display: none;
-  position: absolute;
-  top: -6px;
-  right: 0;
-  background-color: #e17992;
-  width: 250px;
-  z-index: 10;
-  padding-top: 60px;
-  padding-right: 20px;
-  padding-bottom: 171px;
-  padding-left: 21px;
-  &.is-open {
-    display: block;
+}
+
+.navigation-list-item {
+  &:first-of-type {
+    color: #D41443;
+  }
+
+  @media screen and (min-width: 1280px) {
+    &:not(:last-child) {
+      margin-right: 35px;
+    } 
   }
 }
+
 .navigation-list-link {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
   color: #ffffff;
+
   &:hover,
   &:focus {
     color: #d41443;
   }
-  .tablet-btn {
+
+  @media screen and (max-width: 1279px) {
     display: block;
-    margin-left: 30px;
-  }
-  .logo {
-    margin-right: 291px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .header {
-    padding-top: 37px;
-  }
-  .header-btn {
-    width: 186px;
-    padding-left: 53px;
-    .icon-vector {
-      margin-left: 14px;
-    }
-  }
-  .menu-wrapper {
-    width: 254px;
-    top: -37px;
-    padding-right: 24px;
-    padding-bottom: 689px;
-    padding-left: 34px;
-  }
-  .menu-btn {
-    &.is-open {
-      position: absolute;
-      top: -14px;
-      right: 34px;
-    }
+    padding: 12px 0 12px 21px;
+    border: 1px solid #E18298;
+  
   }
 }
-@media screen and (max-width: 1199px) {
-  .header-btn {
-    margin-bottom: 19px;
-  }
-  .navidation-list-item {
-    border-bottom: 1px solid #ffb8ca;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-  .navidation-list-item:first-child {
-    border-top: 1px solid #ffb8ca;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header {
-    .container {
-      width: 1280px;
-      padding-left: 46px;
-    }
-  }
-  .menu-btn {
-    display: none;
-  }
-  .menu-wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-  }
-  .header-btn {
-    width: 159px;
-    padding-left: 35px;
-    padding-right: 35px;
-    .icon-vector {
-      margin-left: 12px;
-    }
-  }
-  .logo {
-    margin-right: 110px;
-  }
-  .navigation {
-    margin-right: 110px;
-  }
-  .navigation-list {
-    display: flex;
-  }
-  .navigation-list-item:not(:last-child) {
-    margin-right: 35px;
-  }
-  .navigation-list-link {
-    font-size: 16px;
-    line-height: 1.31;
-  }
-}
+// @media screen and (min-width: 768px) {
+//   .header {
+//     & .container {
+//       padding-left: 34px;
+//       padding-right: 34px;
+//     }
+
+//     padding-top: 31px;
+//   }
+//   .header-btn {
+//     width: 186px;
+//     padding-left: 53px;
+//     .icon-vector {
+//       margin-left: 14px;
+//     }
+//   }
+//   
+//   .menu-btn {
+//     &.is-open {
+//       position: absolute;
+//       top: -14px;
+//       right: 34px;
+//     }
+//   }
+
+//   .tablet-btn {
+//     display: block;
+//     margin-left: 30px;
+//   }
+//   .logo {
+//     margin-right: 291px;
+//   }
+// }
+// @media screen and (max-width: 1199px) {
+//   .header-btn {
+//     margin-bottom: 19px;
+//   }
+//   .navidation-list-item {
+//     border-bottom: 1px solid #ffb8ca;
+//     padding-top: 12px;
+//     padding-bottom: 12px;
+//   }
+//   .navidation-list-item:first-child {
+//     border-top: 1px solid #ffb8ca;
+//   }
+// }
+// @media screen and (min-width: 1200px) {
+//   .header .container {
+//       width: 1280px;
+//       padding-left: 46px;
+//   }
+//   .menu-btn {
+//     display: none;
+//   }
+//  
+//   .header-btn {
+//     width: 159px;
+//     padding-left: 35px;
+//     padding-right: 35px;
+//     .icon-vector {
+//       margin-left: 12px;
+//     }
+//   }
+//   .logo {
+//     margin-right: 110px;
+//   }
+//   .navigation {
+//     margin-right: 110px;
+//   }
+//   .navigation-list {
+//     display: flex;
+//   }
+//   .navigation-list-item:not(:last-child) {
+//     margin-right: 35px;
+//   }
+//   .navigation-list-link {
+//     font-size: 16px;
+//     line-height: 1.31;
+//   }
+// }
