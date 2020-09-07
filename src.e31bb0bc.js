@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./../images/hero_images/slider-pic7-1.png":[["slider-pic7-1.66c9024a.png","images/hero_images/slider-pic7-1.png"],"images/hero_images/slider-pic7-1.png"],"./../images/hero_images/ellipse-3.png":[["ellipse-3.253327d7.png","images/hero_images/ellipse-3.png"],"images/hero_images/ellipse-3.png"],"./../images/hero_images/slider-pic7-1@2x.png":[["slider-pic7-1@2x.ddaf4412.png","images/hero_images/slider-pic7-1@2x.png"],"images/hero_images/slider-pic7-1@2x.png"],"./../images/hero_images/ellipse-3@2x.png":[["ellipse-3@2x.6daf3e8a.png","images/hero_images/ellipse-3@2x.png"],"images/hero_images/ellipse-3@2x.png"],"./../images/hero_images/tablet/slider-pic4-1-t.png":[["slider-pic4-1-t.e32abcfc.png","images/hero_images/tablet/slider-pic4-1-t.png"],"images/hero_images/tablet/slider-pic4-1-t.png"],"./../images/hero_images/tablet/slider-pic7-1-t.png":[["slider-pic7-1-t.83c97e16.png","images/hero_images/tablet/slider-pic7-1-t.png"],"images/hero_images/tablet/slider-pic7-1-t.png"],"./../images/hero_images/tablet/ellipse-3-t.png":[["ellipse-3-t.1d751a0f.png","images/hero_images/tablet/ellipse-3-t.png"],"images/hero_images/tablet/ellipse-3-t.png"],"./../images/hero_images/tablet/slider-pic5-1-t.png":[["slider-pic5-1-t.b07d2a2c.png","images/hero_images/tablet/slider-pic5-1-t.png"],"images/hero_images/tablet/slider-pic5-1-t.png"],"./../images/hero_images/slider-pic4-1@2x.png":[["slider-pic4-1@2x.c66b3379.png","images/hero_images/slider-pic4-1@2x.png"],"images/hero_images/slider-pic4-1@2x.png"],"./../images/hero_images/slider-pic5-1@2x.png":[["slider-pic5-1@2x.bff04cb8.png","images/hero_images/slider-pic5-1@2x.png"],"images/hero_images/slider-pic5-1@2x.png"],"./../images/hero_images/slider-pic4-1.png":[["slider-pic4-1.d6ebb3a8.png","images/hero_images/slider-pic4-1.png"],"images/hero_images/slider-pic4-1.png"],"./../images/hero_images/slider-pic5-1.png":[["slider-pic5-1.65497fb4.png","images/hero_images/slider-pic5-1.png"],"images/hero_images/slider-pic5-1.png"],"./../images/hero_images/arrow-right-3.png":[["arrow-right-3.7ca0cee0.png","images/hero_images/arrow-right-3.png"],"images/hero_images/arrow-right-3.png"],"./../images/howmade/howmade-bg.png":[["howmade-bg.02261cc1.png","images/howmade/howmade-bg.png"],"images/howmade/howmade-bg.png"],"./../images/respond/respond-text-line.png":[["respond-text-line.5e6cb386.png","images/respond/respond-text-line.png"],"images/respond/respond-text-line.png"],"./../images/location/drops_of_milk.png":[["drops_of_milk.ea6330bf.png","images/location/drops_of_milk.png"],"images/location/drops_of_milk.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -221,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52030" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50787" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
