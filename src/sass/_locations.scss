@@ -2,11 +2,11 @@
   background: $secondary-bg-color;
 }
 
-.container {
-  padding: 0 40px;
-  margin-left: auto;
-  margin-right: auto;
-}
+// .container {
+  
+//   margin-left: auto;
+//   margin-right: auto;
+// }
 
 .link {
   text-decoration: none;
@@ -23,6 +23,19 @@
 .location-container {
   font-family: $font-primery;
   position: relative;
+  margin: 0 auto;
+
+  @media screen and (min-width: 320px) {
+    width: 220px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 696px; 
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1050px;
+  }
 }
 
 .block-container {
@@ -30,7 +43,7 @@
 }
 
 .location-list-block {
-  width: 220px;
+  width: 100%;
   height: 427px;
   background: #fff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
@@ -87,7 +100,6 @@
   font-size: 12px;
   line-height: 1.5;
   color: $secondary-text-color;
-  width: 179px;
   margin: 0;
   padding-top: 10px;
   padding-bottom: 25px;
@@ -176,11 +188,11 @@
 
 @media screen and (min-width: 320px) {
   .container {
-    width: 320px;
     padding: 0 50px;
   }
 
   .block-container {
+    width: 220px;
     top: -84px;
   }
 
@@ -189,7 +201,6 @@
   }
 
   .location-block-list:not(:last-child) {
-    width: 179px;
     border-bottom: 1px solid #e1e1e1;
   }
 
@@ -209,11 +220,11 @@
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 772px;
     padding: 0 36px;
   }
 
   .block-container {
+    width: 696px;
     top: -78px;
   }
 
@@ -249,15 +260,14 @@
   .location-list-info {
     font-size: 14px;
     line-height: 1.64;
-    width: 145px;
     margin: 0;
     padding-top: 14px;
     padding-bottom: 30px;
   }
 
   .location-list-block {
+    width: calc((100% - 40px)/3);
     height: 544px;
-    width: 220px;
     padding: 50px 31px;
     margin-bottom: 0;
     &:not(:last-child) {
@@ -267,17 +277,12 @@
   }
 
   .location-block-list:not(:last-child) {
-    width: 157px;
     border-bottom: 1px solid #e1e1e1;
   }
 
   .location-list {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .location-list {
     display: flex;
+    width: 100%;
   }
 
   .menu-button {
@@ -301,13 +306,13 @@
 
 @media screen and (min-width: 1280px) {
   .container {
-    width: 1280px;
     padding: 0 115px;
     background-image: url(../images/location/drops_of_milk.png);
     background-repeat: no-repeat;
   }
 
   .block-container {
+    width: 1050px;
     top: -102px;
     margin-left: auto;
     margin-right: auto;
@@ -333,7 +338,6 @@
   .location-list-info {
     font-size: 16px;
     line-height: 1.81;
-    width: 234px;
     margin: 0;
     padding-top: 14px;
     padding-bottom: 30px;
@@ -345,8 +349,8 @@
   }
 
   .location-list-block {
+    width: calc((100% - 58px)/3);
     height: 572px;
-    width: 330px;
     padding: 52px 43px 61px 43px;
     margin-bottom: 0;
 
@@ -356,7 +360,6 @@
   }
 
   .location-block-list:not(:last-child) {
-    width: 234px;
     border-bottom: 1px solid #e1e1e1;
   }
 

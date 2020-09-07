@@ -1,9 +1,12 @@
 .footer {
+  background: $secondary-bg-color;
+  padding-top: 110px;
 
   h2,
   p {
     margin: 0;
   }
+
   .container {
     margin: 0 auto;
     max-width: 320px;}    
@@ -98,6 +101,7 @@
 }
 @media screen and (min-width: 768px) {
   .footer {
+    padding-top: 155px;
     .container {
       max-width: 768px;
       padding-right: 34px;
@@ -152,6 +156,7 @@
 }
 @media screen and (min-width: 1200px) {
   .footer {
+    padding-top: 165px;
     .container {
       padding-left: 52px;
       padding-right: 52px;

@@ -1,31 +1,71 @@
+.products-section {
+    padding: 120px 20px 100px;
+
+    @media screen and (min-width: 768px) {
+        padding: 120px 35px 110px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 125px 110px 120px;
+    }
+}
+
 .products-list {
     @extend %list;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 
     @media screen and (max-width: 767px) {
-    flex-direction: column;
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: 320px) {
+        width: 280px;
+    }
+
+    @media screen and (min-width: 768px) {
+       width: 698px; 
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 1060px;
     }
 }
-.products-list-item:not(:last-child) {
-    @media screen and (max-width: 767px) {
-    margin-bottom: 130px;
+
+.products-list-item  {
+    flex-shrink: 1;
+    @media screen and (min-width: 768px) {
+        flex-shrink: 0.33;
+    }
+
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+        margin-bottom: 130px;
+        }
+        @media screen and (min-width: 768px) {
+            margin-right: 20px;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-right: 23px;
+        }
     }
 }
+
 .products-list-item-bg1,
 .products-list-item-bg2,
 .products-list-item-bg3 {
     border-radius: 24px;
-    width: 280px;
+    // width: 280px;
     height: 485px;
 
     @media screen and (min-width: 768px) {
-    width: 220px;
+    // width: 220px;
     height: 485px;
     }
     @media screen and (min-width: 1200px) {
-    width: 329px;
+    // width: 329px;
     height: 525px;
     }
 }
@@ -93,7 +133,8 @@
 
     @media screen and (max-width: 767px) {
     bottom: 70%;
-    left: 6%;
+    left: 50%;
+    transform: translateX(-50%);
     }
     @media screen and (min-width: 768px) {
     bottom: 75%;
@@ -102,14 +143,7 @@
     bottom: 80%;
     } 
 }
-.products-list-item:not(last-child) {
-    @media screen and (min-width: 768px) {
-    margin-right: 20px;
-    }
-    @media screen and (min-width: 1200px) {
-    margin-right: 23px;
-    }
-}
+
 .products-item-name {
     font-family: $font-title;
     font-style: normal;
