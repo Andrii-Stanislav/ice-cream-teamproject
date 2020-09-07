@@ -42,16 +42,25 @@
  
   color: $light-text-color;
 
+  // @media screen and min-width: and (max-width: 767px) {
+  //   height: 400px;
+  // }
+
   @media screen and (max-width: 1279px) {
     position: absolute;
     z-index: 2;
     top: -6px;
     right: 0;
     width: 250px;
-    height: 500px;
+    height: 502px;
     padding-top: 136px;
     background-color: #E17992;
-    // transform: translateY(-500px);
+    transform: translateY(-502px);
+    transition: 250ms;
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 1279px) {
+    height: 400px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -93,11 +102,15 @@
     right: 115px;
   }
 
-  // transform: translateY(-500px);
+  @media screen and (max-width: 1279px) {
+    transform: translateY(-502px);  
+    transition: 250ms;  
+  }
 
   &:hover,
   &:focus {
     background-color: #c7133e;
+    color: $light-text-color;
   }
 
   & .icon-vector {
@@ -123,10 +136,18 @@
   border: none;
   background-color: transparent;
   z-index: 20;
+  outline: none;
   .icon-close {
     display: none;
   }
   &.is-open {
+
+  @media screen and (min-width: 768px) and (max-width: 1279px){
+    position: absolute;
+    top: 20px;
+    right: -220px;
+  }
+
     .icon-close {
       display: block;
     }
@@ -174,6 +195,20 @@
   
   }
 }
+
+
+.navigation.is-open {
+  transform: translateY(0);
+}
+
+.navigation.is-open ~ .header-btn {
+  transform: translateY(0);
+} 
+
+.navigation.is-open ~ .icon-burger {
+  opacity: 1;
+}
+
 // @media screen and (min-width: 768px) {
 //   .header {
 //     & .container {
